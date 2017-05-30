@@ -1,0 +1,19 @@
+{
+  "name": "frameware-io-website",
+  "version": "1.0.0",
+  "description": "Website for http://www.frameware.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrameWareIO/FrameWare-IO-Website.git"
+  },
+  "author": "Ibrahim Abdulkadir",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/FrameWareIO/FrameWare-IO-Website/issues"
+  },
+  "homepage": "https://github.com/FrameWareIO/FrameWare-IO-Website#readme"
+}
