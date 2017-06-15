@@ -5,21 +5,29 @@
 import React, {Component} from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import Dialog from 'material-ui/Dialog';
-import {deepOrange500} from 'material-ui/styles/colors';
+import {cyanA400} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TextField from 'material-ui/TextField';
+import MainAppBar from './MainAppBar';
 
 const styles = {
+  
+  header: {
+    textAlign: 'center',
+  },
+  
   container: {
     textAlign: 'center',
     paddingTop: 200,
   },
+  
 };
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: deepOrange500,
+    accent1Color: cyanA400,
   },
 });
 
@@ -45,6 +53,9 @@ class Main extends Component {
   }
 
   render() {
+    
+  
+
     const standardActions = (
       <FlatButton
         label="Ok"
@@ -55,7 +66,16 @@ class Main extends Component {
 
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
+         
+        <div style={styles.header}>
+          
+        <MainAppBar />
+        
+        
+        
         <div style={styles.container}>
+        
+          
           <Dialog
             open={this.state.open}
             title="Super Secret Password"
@@ -64,14 +84,23 @@ class Main extends Component {
           >
             1-2-3-4-5
           </Dialog>
-          <h1>Material-UI</h1>
-          <h2>example project</h2>
+          
+          <img src={require('/framewareio.png')} />
+          
+          <h1>Launching soon</h1>
+          <h2>Stay updated by subscribing to our mailing list</h2>
+          
+          <TextField hintText="Hint Text" />
+    
           <RaisedButton
             label="Super Secret Password"
             secondary={true}
             onTouchTap={this.handleTouchTap}
           />
         </div>
+        
+         </div>
+         
       </MuiThemeProvider>
     );
   }
