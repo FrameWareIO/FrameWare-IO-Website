@@ -7,6 +7,7 @@ import AppBar from 'material-ui/AppBar';
  */
 const MainAppBar = () => ( <
     AppBar title = "Title"
+    style={{ backgroundColor: '#2196F3' }}
     iconClassNameRight = "muidocs-icon-navigation-expand-more" /
     >
 );

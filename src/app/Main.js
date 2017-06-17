@@ -15,10 +15,11 @@ import SideRight from './SideRight';
 
 
 const styles = {
-  
+
   container: {
   },
-  
+
+
 };
 
 const muiTheme = getMuiTheme({
@@ -28,20 +29,24 @@ const muiTheme = getMuiTheme({
 });
 
 class Main extends Component {
-  
+
   render() {
-    
+
     return (
-      
+
       <MuiThemeProvider muiTheme={muiTheme}>
 
-        {/*<MainAppBar />*/}
+        <div>
+          
+          {/*<MainAppBar />*/}
 
-        <div className='row' style={styles.container}>
+          <div className='row' style={styles.container}>
 
-         <SideLeft />
-         <SideRight />
-         
+            <SideLeft />
+            <SideRight />
+
+          </div>
+
         </div>
 
       </MuiThemeProvider>
