@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 import Main from './Main'; // Our custom react component
 
 // Needed for onTouchTap

@@ -34,13 +34,30 @@ const config = {
     ],
     module: {
         rules: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-            query: {
-                cacheDirectory: true,
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    cacheDirectory: true,
+                },
             },
-        }, ],
+
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
+            },
+
+            {
+                test: /\.(html|svg|jpe?g|png|ttf|woff2?)$/,
+                loader: 'url-loader?limit=8192'
+            },
+
+            {
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader'
+            }
+
+        ],
     },
 };
 
