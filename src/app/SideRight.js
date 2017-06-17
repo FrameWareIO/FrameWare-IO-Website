@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import FontIcon from 'material-ui/FontIcon';
+import ContentSend from 'material-ui/svg-icons/content/send';
 import classNames from 'classnames';
-
 
 
 const styles = {
@@ -11,11 +11,10 @@ const styles = {
     container: {
         textAlign: 'center',
         paddingTop: 200,
-        paddingBottom: 200,
-        backgroundColor: '#2AACEA',
+        paddingBottom: 350,
+        backgroundColor: '#2196F3',
         color: '#FFFFFF'
     },
-
 
     underlineStyle: {
         borderColor: '#FFFFFF',
@@ -28,7 +27,6 @@ const styles = {
     subscribeButton: {
         margin: 12,
     }
-
 }
 
 
@@ -45,7 +43,10 @@ class SideLeft extends Component {
     handleSubscribe = () => {
         this.setState({
             email: this.refs.emailField.getValue(),
+        }, function () {
+            console.log(this.state.email);
         });
+
     }
 
     render() {
@@ -67,6 +68,7 @@ class SideLeft extends Component {
                     onTouchTap={this.handleSubscribe}
                     style={styles.subscribeButton}
                     icon={<FontIcon className="muidocs-icon-custom-github" />}
+                    icon={<ContentSend color={'#2196F3'} />}
                 />
 
             </div>
