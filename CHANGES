@@ -1,0 +1,19 @@
+Version 0.1.0
+ - Merge branch 'serverFeature' into develop
+ - fix webpack dev
+ - Merge branch 'deployfeature' into develop
+ - Merge branch 'release-0.2'
+ - Remove the now ignored directory node_modules
+ - add .gitignore
+ - Merge branch 'indexfeature' into develop
+ - implement simple interface
+ - minor fixes
+ - build project
+ - Merge branch 'release-1.0.0' Merge release-1.0.0 to master
+ - Fix .babelrc issue
+ - Merge setupfeature into develop
+ - Implement www
+ - Initialize node and implement webpack
+ - Initial commit
+ - Initial commit
+
