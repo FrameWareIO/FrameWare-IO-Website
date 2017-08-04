@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const createBabelConfig = require('./babelrc');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 const config = {
@@ -37,9 +38,8 @@ const config = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
-                    cacheDirectory: true,
-                },
+                //query: require('./babelrc.js'),
+                query: createBabelConfig({ server: true }),
             },
 
             {
